@@ -1,0 +1,12 @@
+[
+    {
+        "_id": "5eee0cce3af14325bc457d4a",
+        "name": "Anar",
+        "surname": "Babacan",
+        "email": "a.babacan@mail.ru",
+        "password": "$2b$10$vnzTM6vK3/aHhSIpBK3lQuZI7vBlY5oupzOCEJf4IC1g.3XyuGJui",
+        "passwordStr": "123456",
+        "is_active": true,
+        "__v": 0
+    }
+]

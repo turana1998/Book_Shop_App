@@ -1,0 +1,95 @@
+   
+   <div class="col-12">
+    <div>
+        <div class="card-table">
+            <h4 class="card-title mt-3" style="font-weight: 300;
+            line-height: 1.2;
+            color: inherit;font-size: 1.125rem;">Yazıçıların Siyahısı</h4>
+            <a href="#/writers_add"><button style="float:right;" class="btn btn-outline-primary btn-sm mb-3">Əlavə Et</button></a>
+            <div class="Message"></div>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr  style="color: #ced4da;font-size: 14px;font-weight: 500;border-bottom: 2px solid #4F5467;border-top: 1px solid #4F5467">
+                            <th>Şəkil</th>
+                            <th>Ad Soyad</th>
+                            <th>Email</th>
+                            <th>Əlaqə Nömrəsi</th>
+                            <th>Kateqoriya</th>
+                            <th>Kitabların Sayı</th>
+                            <th>Əməliyyatlar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                            <tr ng-repeat="writer in writers track by $index"  style="color: #ced4da;font-size: 14px;">
+                                <td><img width="55" height="55" src="" alt=""></td>
+                                <td>{{writer.name}}</td>
+                                <td>{{writer.surname}}</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>
+                                    <button onclick="Bax()" data-toggle="modal"
+                                        data-target="#staticBackdrop"
+                                        class="btn btn-outline-info btn-sm">Bax</button>
+                                        <button
+                                        onclick="Sil()"
+                                        class="btn btn-outline-success btn-sm">Redaktə Et</button>
+                                    <button
+                                        onclick="Sil()"
+                                        class="btn btn-outline-danger btn-sm">Sil</button>
+                                </td>
+                            </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content"  style="background-color: #353c48;">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Ətraflı baxış</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Şəkil</label>
+                    <img class="pl-4" id="blogsekil" style="width:150px; height:100px;" src="" alt="User_Sekil" />
+                </div>
+                <div class="form-group">
+                    <label>Ad</label>
+                    <p></p>
+                </div>
+                <div class="form-group">
+                    <label>Soyad</label>
+                    <p></p>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <p ></p>
+                </div>
+                <div class="form-group">
+                    <label>Əlaqə Nömrəsi</label>
+                    <p ></p>
+                </div>
+                <div class="form-group">
+                    <label>Qısa Məlumat</label>
+                    <p ></p>
+                </div>
+                <div class="form-group">
+                    <label>Tarix</label>
+                    <p ></p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Bağla</button>
+            </div>
+        </div>
+    </div>
+</div>

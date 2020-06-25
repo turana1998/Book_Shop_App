@@ -1,0 +1,71 @@
+<!-- <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true" >
+    <div class="modal-dialog" role="document">
+        <div class="modal-content"  style="background-color: #353c48;">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Ətraflı baxış</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Şəkil</label>
+                    <img class="pl-4" id="blogsekil" style="width:150px; height:100px;" src="" alt="User_Sekil" />
+                </div>
+                <div class="form-group">
+                    <label>Ad</label>
+                    <p>{{user.role.name}}</p>
+                </div>
+                <div class="form-group">
+                    <label>Slug</label>
+                    <p id="blogslug"></p>
+                </div>
+                <div class="form-group">
+                    <label>Tarix</label>
+                    <p id="blogtarix"></p>
+                </div>
+                <div class="form-group">
+                    <label>Məzmun</label>
+                    <div id="blogmezmun"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Bağla</button>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<md-dialog aria-label="Ətraflı baxış" style="background-color: #353c48;width: 600px;">
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+          <h2>Ətraflı baxış</h2>
+          <span flex></span>
+          <md-button class="md-icon-button" ng-click="cancel()">
+            <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+          </md-button>
+        </div>
+      </md-toolbar>
+      <md-dialog-content>
+        <div layout="column" class="details">
+            <div >
+                <label>Şəkil:</label>
+                <img style="width:150px; height:100px;" src="{{api_url+user.photo}}" class="rounded"/>
+            </div>
+            <div >
+                <label>Ad Soyad:</label>
+                <p>{{user.name+' '+user.surname}}</p>
+            </div>
+            <div >
+                <label>Email:</label>
+                <p>{{user.email}}</p>
+            </div>
+            <div >
+                <label>Rolu:</label>
+                <p>{{user.role}}</p>
+            </div>
+        
+          </div>
+      </md-dialog-content>
+</md-dialog>
